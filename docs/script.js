@@ -36,6 +36,11 @@ const projects = {
         title: 'AgriRs',
         images: [
             'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/pg-inicial-1.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/pg-inicial-2.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/footer_agri.png',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/SECTION NOTICIAS.svg',
+            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/SECTION PROJETOS.svg',
         ],
         tags: [{ label: 'Front-end', cls: '' }, { label: 'Scrum Master', cls: 'yellow' }],
         techs: ['HTML', 'CSS', 'JavaScript', 'Scrum', 'Git'],
