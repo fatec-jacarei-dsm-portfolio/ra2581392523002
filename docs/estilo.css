@@ -384,6 +384,30 @@ nav {
     box-shadow: var(--shadow-sm);
 }
 
+/* Estilo do Botão do GitHub no Modal */
+.btn-modal-github {
+    display: none; /* O JS vai mudar para 'flex' quando houver link */
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: #24292e; /* Preto clássico do GitHub */
+    color: white;
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+    font-weight: 800;
+    font-size: 14px;
+    transition: all 0.2s ease;
+    border: 1px solid #24292e;
+    flex: 1; /* Divide o espaço igualmente */
+}
+
+.btn-modal-github:hover {
+    background-color: #000000;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
+}
+
 /* Ajuste no footer para os botões ficarem lado a lado */
 .proj-modal-footer {
     display: flex;
@@ -650,7 +674,7 @@ nav {
     .carousel-container { height: 350px; }
     .proj-modal-body { padding: 24px 20px; }
     .proj-modal-footer { flex-direction: column; }
-    .btn-modal-primary, .btn-modal-notion { width: 100%; }
+    .btn-modal-primary, .btn-modal-notion, .btn-modal-github { width: 100%; }
 }
 
 /* 7. Ajuste para telas muito pequenas (iPhone SE, etc) */

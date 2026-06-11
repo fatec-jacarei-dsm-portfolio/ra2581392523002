@@ -19,7 +19,7 @@ const projects = {
         // Textos em Português
         pt: {
             desc: 'A BemLar nasceu da observação do cotidiano da minha mãe e de tantas outras mulheres ao meu redor que dedicam suas vidas ao trabalho doméstico. Decidi unir minha vivência pessoal às minhas habilidades de UI/UX para criar mais que um app: uma plataforma que valoriza essas profissionais. Com um design acolhedor e um fluxo de contratação simplificado, o foco é oferecer uma experiência eficiente, segura e, acima de tudo, humana.',
-            role: 'Minha atuação uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas e identificar lacunas. Como UI/UX Designer, projetei uma solução Mobile-First focada na acessibilidade, garantindo que a tecnologia seja uma aliada simples no dia a dia.',
+            role: 'Minha atuação uniu pesquisa e execução. Como UX Researcher, realizei um Benchmarking profundo para entender o mercado de diaristas e identificar lacunas. Como UI/UX Designer, projetei uma solution Mobile-First focada na acessibilidade, garantindo que a tecnologia seja uma aliada simples no dia a dia.',
             situation: 'Projeto concluído.🌟',
             linkText: 'Ver Protótipo no Figma'
         },
@@ -35,12 +35,13 @@ const projects = {
     agrirs: {
         title: 'AgriRs',
         images: [
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/AgriRs.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/pg-inicial-1.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/pg-inicial-2.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/footer_agri.png',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/SECTION NOTICIAS.svg',
-            'https://pedrosmp.github.io/Meu-portif-lio-OFICIAL/fotos/SECTION PROJETOS.svg',
+            /* CORREÇÃO AQUI: Mudado para os caminhos locais da sua pasta de fotos */
+            './fotos/AgriRs.png',
+            './fotos/pg-inicial-1.png',
+            './fotos/pg-inicial-2.png',
+            './fotos/footer_agri.png',
+            './fotos/SECTION NOTICIAS.svg',
+            './fotos/SECTION PROJETOS.svg',
         ],
         tags: [{ label: 'Front-end', cls: '' }, { label: 'Scrum Master', cls: 'yellow' }],
         techs: ['HTML', 'CSS', 'JavaScript', 'Scrum', 'Git'],
@@ -86,7 +87,39 @@ const projects = {
             linkText: 'View Prototype on Figma'
         }
     },
+    chatboot: {
+        title: 'Chatboot',
+        images: [
+            './fotos/chat.png',
+            './fotos/pg_admin1.png',
+            './fotos/pg_admin.png',
+            './fotos/RELATORIOS.svg',
+            './fotos/PERGUNTAS.svg',
+            
+        ],
+        tags: [{ label: 'UX Research', cls: '' }, { label: 'UX Design', cls: 'green' }, { label: 'UI Design', cls: 'green' }, { label: 'Figma', cls: 'green' }, { label: 'TypeScript', cls: 'green' },],
+        techs: ['Figma', 'UX Research', 'TypeScript', 'UX Design', 'UI Design'],
+        link: 'https://www.figma.com/design/nxX4kUKGSKeNLARNj0iMDf/ChatBoot--Fatec?node-id=0-1&t=c0yBpOIfKkMscK6w-1',
+        Githublink: 'https://github.com/404NotFound-ABP/Autoatendimento_Academico.git',
+        
+        pt: {
+            desc: 'O chatboot Faqtec é um projeto que foi pensado para ser um assistente virtual inteligente, projetado para fornecer suporte e informações de forma rápida e eficiente. Ele utiliza tecnologias avançadas de processamento de linguagem natural para entender as perguntas dos usuários e fornecer respostas precisas, tornando a experiência de atendimento mais fluida e satisfatória, além de oferecer uma ajuda para a equipe da secretaria, reduzindo a carga de trabalho e melhorando a eficiência no atendimento.',
+            role: 'Minha atuação foi focada em UX Research e estratégia. Conduzi um Benchmarking comparativo, para retirar dados e construir o pruduto final. Com base nos dados coletados, propus funcionalidades que reduzem a carga cognitiva do usuário, como a organização clara  e uma interação fluída em forma de chat. Por fim e a principal funcionalidade do projeto, é a construção da página administrativa, onde a equipe da secretaria pode acompanhar as perguntas mais frequentes, e ter uma visão geral do que os usuários estão buscando, para assim melhorar o atendimento e a eficiência do chatboot.',
+            situation: 'Projeto entregue e escolhido pelo cliente com grande satisfação. 🌟',
+            linkText: 'Ver Protótipo no Figma',
+            Githublink: 'Ver Código no GitHub'
+        },
+
+        en: {
+            desc: 'The Faqtec chatbot is a project conceived to be an intelligent virtual assistant, designed to provide support and information quickly and efficiently. It uses advanced natural language processing technologies to understand user questions and deliver precise answers, making the service experience more fluid and satisfying, while also offering assistance to the secretariat team, reducing workload and improving service efficiency.',
+            role: 'My role was focused on UX Research and strategy. I conducted a comparative Benchmarking to gather data and build the final product. Based on the collected data, I proposed features that reduce the user\'s cognitive load, such as clear organization and a fluid chat interaction. Finally, the main feature of the project is the development of the administrative page, where the secretariat team can track the most frequently asked questions and get an overview of what users are searching for, thereby improving service and the chatbot\'s efficiency.',
+            situation: 'Project delivered and chosen by the client with great satisfaction.🌟',
+            linkText: 'View Prototype on Figma',
+            Githublink: 'View Code on GitHub'
+        }
+    }
 };
+
 
 /* -----------------------------------------------------------
    2. NAVEGAÇÃO E MENU
@@ -116,9 +149,6 @@ function closeMenu() {
 }
 
 /* -----------------------------------------------------------
-   3. MODAL DE PROJETOS
------------------------------------------------------------ */
-/* -----------------------------------------------------------
    3. MODAL DE PROJETOS (VERSÃO À PROVA DE BALAS)
 ----------------------------------------------------------- */
 function openProject(id) {
@@ -136,6 +166,7 @@ function openProject(id) {
     const roleEl = document.getElementById('proj-modal-role');
     const situationEl = document.getElementById('proj-modal-situation');
     const notionBtn = document.getElementById('proj-modal-notion');
+    const githubBtn = document.getElementById('proj-modal-github');
     const btnLink = document.getElementById('proj-modal-link');
 
     // --- 1. PREENCHER TEXTOS (COM VERIFICAÇÃO) ---
@@ -179,6 +210,25 @@ function openProject(id) {
             }
         } else {
             notionBtn.style.display = 'none';
+        }
+    }
+
+    // --- LÓGICA DO BOTÃO DO GITHUB ---
+    if (githubBtn) {
+        if (p.Githublink) {
+            githubBtn.href = p.Githublink;
+            githubBtn.style.display = 'flex';
+            
+            const spanInside = githubBtn.querySelector('span');
+            const text = langData.Githublink || (lang === 'pt' ? 'Ver Código no GitHub' : 'View Code on GitHub');
+            
+            if (spanInside) {
+                spanInside.textContent = text;
+            } else {
+                githubBtn.textContent = text;
+            }
+        } else {
+            githubBtn.style.display = 'none';
         }
     }
 
